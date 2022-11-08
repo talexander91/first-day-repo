@@ -1,0 +1,246 @@
+:root {
+  --mainColor: #1d2e64;
+  --secColor: #9eb4ff;
+  --accentColor: #182c33;
+  --dark: #5b5b5b;
+  --light: #c6c6c6;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Calibri', 'Trebuchet MS';
+  color: var(--mainColor);
+  background-color: var(--secColor);
+  line-height: 2;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+header {
+  padding: 15px 6% 15px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: var(--accentColor);
+  box-shadow: 0 5px 35px rgba(146, 204, 206, 0.4);
+}
+
+header h1 {
+  color: var(--accentColor);
+  background-color: var(--secColor);
+  padding: 5px 1% 5px 6%;
+  margin: 0;
+  font-size: 5vw;
+  line-height: 1;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 5px 10px;
+  color: var(--secColor);
+  margin-right: 10px;
+  background-image: linear-gradient(270deg, var(--secColor) 0%, var(--secColor) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  background-position: bottom;
+  transition: all 0.1s ease-in;
+  font-size: 1.4rem;
+}
+
+nav a:hover {
+  background-size: 100% 100%;
+  color: var(--mainColor);
+}
+
+.banner h2 {
+  background-color: var(--secColor);
+  color: var(--accentColor);
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 2rem;
+  display: inline;
+}
+
+.page-section {
+  margin: 2rem 0;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.page-section > h2 {
+  flex: 0 0 20%;
+  text-align: right;
+  padding-right: 15px;
+  border-right: 4px solid var(--mainColor);
+  font-size: 4vw;
+  line-height: 1.1;
+}
+
+.page-section > div {
+  flex: 0 0 77%;
+}
+
+.page-section p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.flex-box {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  border: 5px solid var(--secColor);
+  background-color: var(--mainColor);
+  color: var(--accentColor);
+  min-height: 150px;
+  max-height: 150px;
+  flex-basis: calc(50% - 1em);
+  display: flex;
+  align-items: flex-end;
+  padding: 0 0 20px 0;
+  margin: 0.5em;
+  text-decoration: none;
+  background-blend-mode: soft-light;
+  background-size: 150%;
+  transition: all 0.5s;
+  font-size: 0.9rem;
+}
+
+/* feature first portfolio item */
+.flex-item:first-child {
+    min-height: 400px;
+    flex-basis: 100%;
+}
+
+.flex-item:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.flex-item div {
+  background-color: var(--secColor);
+  padding: 8px 10px;
+}
+
+
+.contact address {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+}
+
+.contact address a {
+  color: var(--accentColor);
+  text-decoration: none;
+  padding: 5px 10px;
+  color: var(--mainColor);
+  margin-right: 10px;
+  background-image: linear-gradient(270deg, var(--mainColor) 0%, var(--mainColor) 100%);
+  background-repeat: no-repeat;
+  background-size: 100% 0.1em;
+  background-position: bottom;
+  transition: all 0.1s ease-in;
+  font-size: 1.4rem;
+}
+
+/* @media screen and (max-width: 820px) {
+
+  header{
+    justify-content: space-evenly;
+    text-align: center;
+  }
+  header h1 {
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+  }
+  
+} */
+
+@media screen and (max-width: 980px) {
+  header {
+    padding: 0 0 10px 0;
+    justify-content: center;
+    text-align: center;
+  }
+
+  header h1 {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    font-size: 10vw;
+  }
+
+  header nav {
+    justify-content: center;
+  }
+
+  .banner {
+    text-align: center;
+  }
+
+  .banner h2 {
+    font-size: 3rem;
+  }
+
+  .page-section > h2,
+  .page-section > div {
+    flex: 0 0 100%;
+  }
+
+  .page-section > h2 {
+    border-right: none;
+    border-bottom: 4px solid var(--primary);
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    text-align: left;
+    font-size: 7vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .flex-item {
+    flex-basis: 100%;
+  }
+
+  .flex-item{
+    min-height: 150px;
+  }
+
+  .banner {
+    text-align: center;
+  }
+
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact address {
+    flex-direction: wrap;
+    align-items: flex-start;
+  }
+}
